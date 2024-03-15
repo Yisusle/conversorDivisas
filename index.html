@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Divisas</title>
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <!--Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--Jquery UI-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/theme.min.css" />
+
+    <!--Mio-->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body class="d-flex flex flex-column">
+    <div id="contenido">
+
+        <header id="cabecera">
+
+            <img src="./imgs/currency.png" alt="Currencies" />
+            <!-- <a href="https://www.flaticon.com/free-icons/currency" title="currency icons">Currency icons created by Prosymbols Premium - Flaticon</a> -->
+
+            <h1>Conversor de Divisas</h1>
+            <h4>Escoja la moneda y la cantidad para hacer la conversión.</h4>
+        </header>
+        <form>
+            <div class="d-flex flex-row mb-3">
+                <select class="form-select" aria-label="select">
+                    <option selected>USD</option>
+                </select>
+
+                <input type="number" class="form-control ms-1" id="" pattern="[0-9]*" inputmode="numeric" placeholder="0" value="1">
+            </div>
+
+            <!-- AGREGAR BOTON DE INTERCAMBIAR Y EL VALOR 1 A 1 -->
+
+            <div class="d-flex flex-row mt-4 mb-4 taza-cambio-contenedor">
+                <svg class="btn-intercambiar" xmlns="http://www.w3.org/2000/svg" viewBox="1 3 14 18">
+                    <path
+                        d="M 9 6.99 L 5 3 l -4 3.99 h 3 V 14 h 2 V 6.99 h 3 z M 11 21 l 4 -3.99 h -3 V 10 h -2 v 7.01 h -3 L 11 21 z"
+                        stroke="" stroke-width="0.1" fill="#cccc" />
+                </svg>
+                <!--<button type="button" class="btn btn-outline-info btn-intercambiar">Intercambiar</button>-->
+                <div class="intercambio" id="intercambio"></div>
+            </div>
+
+            <div class="d-flex flex-row mb-3">
+                <select class="form-select" aria-label="select">
+                    <option selected>MXN</option>
+                </select>
+                <input type="number" class="form-control ms-1" id="" placeholder="0" pattern="[0-9]*" inputmode="numeric">
+            </div>
+
+            <div id="botones">
+                <button type="reset" class="btn btn-warning">LIMPIAR</button>
+            </div>
+        </form>
+    </div>
+    <footer class="footer mt-auto py-1">
+        <div class="container text-center p-3">
+            <span class="text-muted"> <a id="creditos" href="https://github.com/Yisusle">&copy;Yisusle</a></span>
+        </div>
+    </footer>
+</body>
+
+</html>
