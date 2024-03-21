@@ -2,7 +2,8 @@
 	margin: 0 auto;
 	text-decoration: none;
 	list-style: none;
-	outline-style: none;
+	outline-style: none !important;
+	outline: none !important;
 }
 
 body {
@@ -51,6 +52,10 @@ h4 {
 	letter-spacing: 3px;
 }
 
+.rounded-fill{
+	padding: 0px !important;
+}
+
 path {
 	stroke: grey;
 	pointer-events: all;
@@ -75,7 +80,7 @@ svg:hover {
 	-o-transform: scale(1.4);
 }
 
-form {
+form, .form {
 	width: 80%;
 }
 
@@ -86,8 +91,8 @@ form {
 
 .intercambio {
 	color: #ffc107;
-	font-size: 14px;
-	padding: 0 10px;
+	font-size: 17px;
+	padding-left: 40%;
 }
 
 input {
@@ -109,14 +114,21 @@ input[type=number] {
 	-moz-appearance: textfield;
 }
 
+::placeholder {
+	color: black !important;
+	font-weight: bold;
+	opacity: 0;
+}
+
 .form-select {
 	width: auto !important;
 }
 
 select:focus,
 input:focus,
-button:focus {
-	outline: 0 !important;
+button:focus,
+button:active {
+	outline: none !important;
 }
 
 footer {
@@ -144,4 +156,21 @@ footer div:hover {
 	-moz-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-o-transform: scale(1.1);
+}
+
+/*RESPONSIVE*/
+@media (max-width: 500px){
+	.intercambio {
+
+		font-size: 16px;
+		padding-left: 20%;
+	}
+}
+
+@media (max-width: 400px){
+	.intercambio {
+
+		font-size: 15px;
+		padding-left: 10%;
+	}
 }
